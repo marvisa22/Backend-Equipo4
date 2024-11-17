@@ -1,6 +1,6 @@
 import {config} from "dotenv";
 config();
-export const PORT = 4000;
+export const PORT = "https://backend-equipo4.onrender.com";
 export const HOST = "http://localhost:" + PORT;
 
 export const PAYPAL_API_CLIENT = process.env.PAYPAL_API_CLIENT;
