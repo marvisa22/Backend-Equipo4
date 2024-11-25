@@ -136,7 +136,7 @@ export const captureOrder = async (req, res) => {
 
     console.log(response.data);
 
-    res.redirect("http://localhost:4200//payed");
+    res.redirect("https://frontend-equipo4.onrender.com");
   } catch (error) {
     console.log(error.message);
     return res.status(500).json({ message: "Internal Server error" });
@@ -144,4 +144,4 @@ export const captureOrder = async (req, res) => {
 };
 
 
-export const cancelPayment = (req, res) => res.redirect("http://localhost:4200/principal");
+export const cancelPayment = (req, res) => res.redirect("https://frontend-equipo4.onrender.com");
