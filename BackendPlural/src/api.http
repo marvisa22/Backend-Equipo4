@@ -1,4 +1,4 @@
-POST http://localhost:4000/create-order2
+POST https://backend-equipo4.onrender.com/create-order2
 Content-Type: application/json
 
 {
@@ -15,12 +15,12 @@ Content-Type: application/json
         "brand_name": "PLURALCURSOS.com",
         "landing_page": "NO_PREFERENCE",
         "user_action": "PAY_NOW",
-        "return_url": "http://localhost:4000/capture-order",
-        "cancel_url": "http://localhost:4000/cancel-payment"
+        "return_url": "https://frontend-equipo4.onrender.com/capture-order",
+        "cancel_url": "https://frontend-equipo4.onrender.com/cancel-payment"
     }
 }
 ### order original
-POST http://localhost:4000/create-order
+POST https://backend-equipo4.onrender.com/create-order
 Content-Type: application/x-www-form-urlencoded
 {
     "intent": "CAPTURE",
@@ -36,7 +36,7 @@ Content-Type: application/x-www-form-urlencoded
         "brand_name": "PLURALCURSOS.com",
         "landing_page": "NO_PREFERENCE",
         "user_action": "PAY_NOW",
-        "return_url": "http://localhost:4000/capture-order",
-        "cancel_url": "http://localhost:4000/cancel-payment"
+        "return_url": "https://frontend-equipo4.onrender.com/capture-order",
+        "cancel_url": "https://frontend-equipo4.onrender.com/cancel-payment"
     }
 }

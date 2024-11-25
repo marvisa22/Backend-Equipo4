@@ -32,12 +32,16 @@ export const createOrder2 = async(req, res) =>{
    })
    req.on('end', () => {
     const data = JSON.parse(body);
+    console.log ("Received data:", data)// Agrega un log para depurar los datos
     data.timestamp = Date.now()
     data.test = data.intent
     order.intent = data.intent
-    order.purchase_units[0].amount.currency_code = data.purchase_units[0].amount.currency_code
+    order.purchase_units[0].amount.currency_code = data.purchase_units[0].amount.currency_code;
+
+    console.log("Updated order:", order); // Log para verificar el objeto `order` antes de enviarlo
+  
     res.status(201).json(data)
-   })
+   });
 }
 
 export const createOrder = async (req, res) => {
@@ -136,7 +140,7 @@ export const captureOrder = async (req, res) => {
 
     console.log(response.data);
 
-    res.redirect("https://frontend-equipo4.onrender.com");
+    res.redirect("https://frontend-equipo4.onrender.com/capture-order");
   } catch (error) {
     console.log(error.message);
     return res.status(500).json({ message: "Internal Server error" });
@@ -144,4 +148,4 @@ export const captureOrder = async (req, res) => {
 };
 
 
-export const cancelPayment = (req, res) => res.redirect("https://frontend-equipo4.onrender.com");
+export const cancelPayment = (req, res) => res.redirect("https://frontend-equipo4.onrender.com/cancel-payment");
